@@ -43,17 +43,17 @@ for station in stations:
 	count += 1
 	percent = round((count / num_stations) * 100)
         
-	#url = r"https://www.wunderground.com/dashboard/pws/{}/graph/{}/{}/daily".format(station, yesterday_formatted, yesterday_formatted)
+	url = r"https://www.wunderground.com/dashboard/pws/{}/graph/{}/{}/daily".format(station, yesterday_formatted, yesterday_formatted)
 
 	##################################################################################################################################
 	# Date format example: 2020-08-19
 	# Example final URL format: https://www.wunderground.com/dashboard/pws/KMDUPPER33/graph/2020-08-19/2020-08-19/daily
         # This is a "quick and dirty" solution for being able to pull rain data from any date in the past, instead of the default which
         #   retrieves the previous days rain data. Note that the CSV output file name will not have the hard-coded date in it, it will
-        #   still reflect yesterday's date. However, the data itself s from the hard-coded date specified in the URL.
+        #   still reflect yesterday's date. However, the data itself is from the hard-coded date specified in the URL.
 	# Enter the date you want as a hard-coded value in the url below, then delete the hashtag at the beginning of the line
 	#   and add a hashtag to the beginning of the previous url statement above.
-	url = r"https://www.wunderground.com/dashboard/pws/{}/graph/2023-03-24/2023-03-24/daily".format(station)
+	# url = r"https://www.wunderground.com/dashboard/pws/{}/graph/2023-03-24/2023-03-24/daily".format(station)
         ##################################################################################################################################
 
 	print(f'Progress: {percent}%')
